@@ -1,0 +1,105 @@
+products data to be displayed over the browser 
+----------------------------------------------
+
+https://dummyjson.com./products
+
+
+copy the json data from the above dummyjson.com products 
+
+
+https://jsonviewer.stack.hu/
+
+
+paste the data in the json viewer 
+
+format it and see thge formatted text in the text section or 
+view the data in the viewer section 
+
+
+
+bootstrap to style the table to display the data 
+
+
+run the products.html 
+
+go to inspect - network - refresh -  headers,preview,response
+
+
+
+
+
+https://youtu.be/HIKQlr33pn4?si=hV7nvDXpruS4Vbp5
+
+
+Products Image 1 - Displaying on browser from API
+
+
+
+
+
+
+parking data to be displayed over the browser 
+----------------------------------------------
+
+
+http://10.121.4.161/TMAPI/api/fetchdockparkingstatus
+
+
+----------------------------------------------
+
+GET Request in POSTMAN
+
+
+
+https://youtu.be/fo2mz_Vv8Zc?si=IrUaFDkMyANN8lQq
+
+https://reqres.in/
+
+https://reqres.in/api/users?page=2
+
+
+
+
+
+
+
+----------------------------------------------
+
+
+PUT,PATCH,POST,DELETE request 
+
+
+https://reqres.in/api/users
+
+
+
+body -> raw 
+text  to json
+
+paste 
+
+{
+    "name": "morpheus",
+    "job": "leader"
+}
+
+
+send 
+
+
+
+----------------------------------------------
+
+
+https://bookstore.demoqa.com/swagger/#/BookStoreV1BookGet
+
+
+
+https://bookstore.demoqa.com/BookStore/v1/Book
+
+
+https://bookstore.demoqa.com/BookStore/v1/Books
+
+
+----------------------------------------------
+

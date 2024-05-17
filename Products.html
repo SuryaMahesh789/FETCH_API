@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap link to style the sheets  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- jquery file to save  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+
+<title>Products Table binding with Javascript</title>
+<body>
+    <h1 style="text-align: center;">Product Details</h1>
+
+
+    <table class="table table-hover" style="width: 100%; border-collapse: collapse; border-spacing: 0; background-color: #ffffff; color: #333;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #e6e6e6;">ID</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #e6e6e6;">Title</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #e6e6e6;">Description</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #e6e6e6;">Price</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #e6e6e6;">Discount Percentage</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #e6e6e6;">Rating</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #e6e6e6;">Stock</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #e6e6e6;">Brand</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #e6e6e6;">Category</th>
+                <th style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #e6e6e6;">Thumbnail</th>
+            </tr>
+        </thead>
+    
+        <tbody id="tableRows">
+        </tbody>
+    
+    </table>
+    
+    
+
+    <script>
+        fetch("https://dummyjson.com./products")
+        .then(response => response.json())
+        .then(res=>{
+            const data=res.products;
+            let rows='';
+
+            data.forEach(product => {
+                rows+=
+                `<tr>
+                    <td>${product.id} </td>
+                    <td>${product.title} </td>
+                    <td>${product.description} </td>
+                    <td>${product.price} </td>
+                    <td>${product.discountPercentage} </td>
+                    <td>${product.rating} </td>
+                    <td>${product.stock} </td>
+                    <td>${product.brand} </td>
+                    <td>${product.category} </td>
+                    <td><img src="${product.thumbnail}" alt="${product.thumbnail}" title="${product.title}" style="width:100%" /></td>
+                </tr>`
+            })
+
+            document.getElementById('tableRows').innerHTML = rows;
+        })
+
+        // .then(res=>console.log(result))
+        .catch(error=>console.log(error))
+    </script>
+</body>
+</html>
+
+
